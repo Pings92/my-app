@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { useState } from 'react'
 
 const AddTodoForm = ({addNewTodo}) => {
-
+    //Pour Jerem interrogation pour la ligne du dessous. Cette phrase je ne la comprends pas
     const [addTodo, setAddTodo] = useState('')
 
     // addNewTodo(addTodo)
@@ -22,7 +22,7 @@ const AddTodoForm = ({addNewTodo}) => {
                 <div className='form-group'>
                     <label>Ajouter Todo</label>
                     <input className='form-control' value={addTodo} type="text" onChange={(e) => setAddTodo(e.target.value)} />
-                    <input type="submit" className="btn btn-success mt-4" />
+                    <input type="submit" value="Mon bouton" className="btn btn-success mt-4" />
                 </div>
             </div>
         </form>
