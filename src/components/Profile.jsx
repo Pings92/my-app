@@ -1,5 +1,6 @@
 import { Component } from "react"
 import profileData from "./ProfileData"
+//  syntaxe d'un composant de type classe
 
 class Profile extends Component {
     render(){
@@ -10,5 +11,6 @@ class Profile extends Component {
         )
     }
 } 
+//  Fin syntaxe d'un composant de type classe
 
 export default Profile
