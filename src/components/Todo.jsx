@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { useState } from 'react'
-import AddTodoForm from './AddTodoForm'
-import { v4 as uuidv4 } from 'uuid'
+import React, { Component } from 'react';
+import { useState } from 'react';
+import AddTodoForm from './AddTodoForm';
+import { v4 as uuidv4 } from 'uuid';
 
 const Todo =() => {
         const [warning, setWarning] = useState(false);
@@ -24,6 +24,7 @@ const Todo =() => {
                 setWarning(true)
             }
         }
+        
 
         const warningMsg = warning && <div className='alert alert-danger' role='alert'>Veuillez indiquer une tâche</div>
         
@@ -31,13 +32,14 @@ const Todo =() => {
             return(
                 <li className="list-group-item" key={todo.id}>{todo.todo}</li>
             )
-        })
+        });
    
     return (
         <div>
             {warningMsg}
             <ul>{myTodos}</ul>
-            <AddTodoForm addNewTodo={addNewTodo}/>
+            <AddTodoForm addNewTodoProps={addNewTodo}/>
+            {/* props={fonction} */}
         </div>
     )
  }

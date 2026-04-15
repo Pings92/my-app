@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { useState } from 'react'
 
-const AddTodoForm = ({addNewTodo}) => {
+const AddTodoForm = ({addNewTodoProps}) => {
     //Pour Jerem interrogation pour la ligne du dessous. Cette phrase je ne la comprends pas
     const [addTodo, setAddTodo] = useState('')
 
@@ -12,7 +12,7 @@ const AddTodoForm = ({addNewTodo}) => {
 
     const handleTodo = (e) => {
         e.preventDefault()
-        addNewTodo(addTodo)
+        addNewTodoProps(addTodo);
         setAddTodo('')
     }
 
@@ -20,8 +20,8 @@ const AddTodoForm = ({addNewTodo}) => {
         <form className="mt-4" onSubmit={handleTodo} > 
             <div className='card card-body'>
                 <div className='form-group'>
-                    <label>Ajouter Todo</label>
-                    <input className='form-control' value={addTodo} type="text" onChange={(e) => setAddTodo(e.target.value)} />
+                    <label className='text txt-info'>Ajouter une tâche</label>
+                    <input className='form-control' value={addTodo} placeholder='Ex: Regarder Malcom, Faire la vaisselle, ...' type="text" onChange={(e) => setAddTodo(e.target.value)} />
                     <input type="submit" value="Mon bouton" className="btn btn-success mt-4" />
                 </div>
             </div>
