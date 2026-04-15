@@ -1,4 +1,4 @@
-import contentData from "./ContentData"
+import ContentData from "./ContentData"
 //  syntaxe d'un composant de "type function"
 
 const ProfileData = () => {
