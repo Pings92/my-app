@@ -1,18 +1,24 @@
 // import { useCallback } from "react"
-function Progress({count, bgColor}){
+import React from "react";
 
-    const progressBar = {width: `${count}%`};
+function Progress({text, count, bgColor}){
 
+    console.log(`Pourcentage ${text}`)
+
+    const progressBar = {width: `${count}%`, height: "100%", backgroundColor: "blue"};
     return (
-        <>
+        // <>
+        <div>
             <p className="h1"> {count}% </p>
 
             <div className="progress">
-                <div className="progress-bar progress-bar-stripped" role="progressbar"
-                style={{width: '0%'}}>
+                <div className={`progress-bar progress-bar-striped bg-${bgColor}`} role="progressbar"
+                style={progressBar}>
                 </div>
             </div>
-        </>
+        </div>
+        // </>
     )
 }
-export default Progress
+export default React.memo(Progress)
+// export default Progress
