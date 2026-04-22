@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import './App.css'
 // import Todo from './components/Todo'
 // import ClassCount from './components/ClassCount'
@@ -8,6 +8,8 @@ import { UserContext, ColorContext } from './components/MyContext'
 import Profile from './components/Profile'
 import Button from './components/Button'
 import Progress from './components/Progress'
+import ClickSayHello from './components/ClickSayHello'
+import MyContact from './components/MyContact'
 
 function App() {
 
@@ -43,10 +45,12 @@ function App() {
         {/* </UserContext.Provider> */}
         {/* <Count /> */}
         {/* <CountReducer /> */}
-        <Progress text = "Count1" count = { count1.value } bgColor = { count1.btnColor } />
+        {/* <Progress text = "Count1" count = { count1.value } bgColor = { count1.btnColor } />
         <Button handleClick={incrementCount1} btnColor={count1.btnColor} increment={count1.increment} > Count 1</Button>
         <Progress text = "Count2" count = { count2.value } bgColor = { count2.btnColor }/>
-        <Button handleClick={incrementCount2} btnColor={count2.btnColor} increment={count2.increment} > Count 2</Button>
+        <Button handleClick={incrementCount2} btnColor={count2.btnColor} increment={count2.increment} > Count 2</Button> */}
+        <MyContact/>
+        <ClickSayHello/>
       </div>
       
 
